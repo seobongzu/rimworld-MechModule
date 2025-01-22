@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <DoBillsCraftingMechanoidModification.label>메카노이드 작업</DoBillsCraftingMechanoidModification.label>
+  <DoBillsCraftingMechanoidModification.verb>작업</DoBillsCraftingMechanoidModification.verb>
+  <DoBillsCraftingMechanoidModification.gerund> 작업</DoBillsCraftingMechanoidModification.gerund>
+  
+  <DoBillsMMTable.label>제작</DoBillsMMTable.label>
+  <DoBillsMMTable.verb>제작</DoBillsMMTable.verb>
+  <DoBillsMMTable.gerund>제작</DoBillsMMTable.gerund>  
+</LanguageData>

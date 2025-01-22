@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+
+  <RecipeDef Abstract="True" Name="MechanoidMaintenance">
+    <effectWorking>MechRepairing</effectWorking>
+    <soundWorking>RepairMech_Touch</soundWorking>
+    <workSpeedStat>ButcheryMechanoidSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+	<mechanitorOnlyRecipe>true</mechanitorOnlyRecipe>
+   <surgeryOutcomeEffect IsNull="True"/>
+  </RecipeDef>
+
+  <RecipeDef Name="InstallModificationBase" ParentName="MechanoidMaintenance" Abstract="True">
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <workAmount>5000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+  	<recipeUsers>
+		<li>Mech_Militor</li>
+		<li>Mech_Lifter</li>
+		<li>Mech_Constructoid</li>
+		<li>Mech_Fabricor</li>
+		<li>Mech_Agrihand</li>
+		<li>Mech_Cleansweeper</li>
+		<li>Mech_Paramedic</li>
+		<li>Mech_Legionary</li>
+		<li>Mech_Tesseron</li>
+		<li>Mech_Scorcher</li>
+		<li>Mech_Apocriton</li>
+		<li>Mech_Tunneler</li>
+		<li>Mech_Centurion</li>
+		<li>Mech_Warqueen</li>
+		<li>Mech_Diabolus</li>
+		<li>Mech_CentipedeBlaster</li>
+		<li>Mech_CentipedeGunner</li>
+		<li>Mech_CentipedeBurner</li>
+		<li>Mech_Lancer</li>
+		<li>Mech_Scyther</li>
+		<li>Mech_Pikeman</li>
+	</recipeUsers>	
+  </RecipeDef>
+
+
+  <RecipeDef Name="RemoveModificationBase" ParentName="MechanoidMaintenance" Abstract="True">
+    <workerClass>Recipe_RemoveImplant</workerClass>
+    <workAmount>2000</workAmount>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+	<recipeUsers>
+		<li>Mech_Militor</li>
+		<li>Mech_Lifter</li>
+		<li>Mech_Constructoid</li>
+		<li>Mech_Fabricor</li>
+		<li>Mech_Agrihand</li>
+		<li>Mech_Cleansweeper</li>
+		<li>Mech_Paramedic</li>
+		<li>Mech_Legionary</li>
+		<li>Mech_Tesseron</li>
+		<li>Mech_Scorcher</li>
+		<li>Mech_Apocriton</li>
+		<li>Mech_Tunneler</li>
+		<li>Mech_Centurion</li>
+		<li>Mech_Warqueen</li>
+		<li>Mech_Diabolus</li>
+		<li>Mech_CentipedeBlaster</li>
+		<li>Mech_CentipedeGunner</li>
+		<li>Mech_CentipedeBurner</li>
+		<li>Mech_Lancer</li>
+		<li>Mech_Scyther</li>
+		<li>Mech_Pikeman</li>
+	</recipeUsers>
+  </RecipeDef>
+
+	<RecipeDef Name="InstallModificationLevelWork" ParentName="InstallModificationBase" Abstract="True">
+		<appliedOnFixedBodyParts>
+			<li>MechanicalHead</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+  <!--Overclock-->
+  
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallOverclockProcessor</defName>
+    <label>install overclock</label>
+    <description>Install a overclock.</description>
+    <descriptionHyperlinks>
+      <HediffDef>OverclockProcessor</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing overclock.</jobString>
+    <workSkillLearnFactor>8</workSkillLearnFactor>	
+    <addsHediff>OverclockProcessor</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>ProcessorAdjustment</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>DisableOverclockProcessor</defName>
+    <label>disable overclock</label>
+    <description>Disable overclock.</description>
+    <descriptionHyperlinks>
+      <HediffDef>OverclockProcessor</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Disabling overclock.</jobString>
+	<skillRequirements Inherit="False"/>
+    <workSkillLearnFactor>4</workSkillLearnFactor>	
+    <removesHediff>OverclockProcessor</removesHediff>
+  </RecipeDef>
+
+
+  <!--SkillLevel-->
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallPrimitiveSkillModule</defName>
+    <label>install skill module(basic)</label>
+    <description>Install a skill module(basic).</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_PrimitiveSkillModule</ThingDef>
+      <HediffDef>GEGEMM_PrimitiveSkillModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing skill module(basic).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_PrimitiveSkillModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_PrimitiveSkillModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_PrimitiveSkillModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>SkillModification</li>
+    </incompatibleWithHediffTags>	
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemovePrimitiveSkillModule</defName>
+    <label>remove skill module(basic)</label>
+    <description>Remove skill module(basic).</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_PrimitiveSkillModule</ThingDef>
+      <HediffDef>GEGEMM_PrimitiveSkillModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing skill module(basic).</jobString>
+    <removesHediff>GEGEMM_PrimitiveSkillModule</removesHediff>
+  </RecipeDef> 
+
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallMechtechSkillModule</defName>
+    <label>install skill module(Standard)</label>
+    <description>Install a skill module(Standard).</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_MechtechSkillModule</ThingDef>
+      <HediffDef>GEGEMM_MechtechSkillModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing skill module(Standard).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_MechtechSkillModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_MechtechSkillModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_MechtechSkillModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>SkillModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveMechtechSkillModule</defName>
+    <label>remove skill module(Standard)</label>
+    <description>Remove skill module(Standard).</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_MechtechSkillModule</ThingDef>
+      <HediffDef>GEGEMM_MechtechSkillModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing skill module(Standard).</jobString>
+    <removesHediff>GEGEMM_MechtechSkillModule</removesHediff>
+  </RecipeDef> 
+
+  
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallHighMechtechSkillModule</defName>
+    <label>install skill module(high)</label>
+    <description>Install a skill module(high).</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_HighMechtechSkillModule</ThingDef>
+      <HediffDef>GEGEMM_HighMechtechSkillModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing skill module(high).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_HighMechtechSkillModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_HighMechtechSkillModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_HighMechtechSkillModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>SkillModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveHighMechtechSkillModule</defName>
+    <label>remove skill module(high)</label>
+    <description>Remove skill module(high).</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_HighMechtechSkillModule</ThingDef>
+      <HediffDef>GEGEMM_HighMechtechSkillModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing skill module(high).</jobString>
+    <removesHediff>GEGEMM_HighMechtechSkillModule</removesHediff>
+  </RecipeDef>
+
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallUltraMechtechSkillModule</defName>
+    <label>install skill module(ultra)</label>
+    <description>Install an skill module(ultra).</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_UltraMechtechSkillModule</ThingDef>
+      <HediffDef>GEGEMM_UltraMechtechSkillModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing skill module(ultra).</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_UltraMechtechSkillModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_UltraMechtechSkillModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_UltraMechtechSkillModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>SkillModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveUltraMechtechSkillModule</defName>
+    <label>remove skill module(ultra)</label>
+    <description>Remove skill module(ultra).</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_UltraMechtechSkillModule</ThingDef>
+      <HediffDef>GEGEMM_UltraMechtechSkillModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing skill module(ultra).</jobString>
+    <removesHediff>GEGEMM_UltraMechtechSkillModule</removesHediff>
+  </RecipeDef> 
+
+  
+  <!--WorkMods-->
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallFirefighterModule</defName>
+    <label>install firefighter module</label>
+    <description>Install a firefighter module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_FirefighterModule</ThingDef>
+      <HediffDef>GEGEMM_FirefighterModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing firefighter module.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_FirefighterModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_FirefighterModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_FirefighterModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>FirefighterModuleModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveFirefighterModule</defName>
+    <label>remove firefighter module</label>
+    <description>Remove firefighter module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_FirefighterModule</ThingDef>
+      <HediffDef>GEGEMM_FirefighterModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing firefighter module.</jobString>
+    <removesHediff>GEGEMM_FirefighterModule</removesHediff>
+  </RecipeDef>  
+  
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallCleaningModule</defName>
+    <label>install cleaning module</label>
+    <description>Install a cleaning module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_CleaningModule</ThingDef>
+      <HediffDef>GEGEMM_CleaningModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing cleaning module.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_CleaningModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_CleaningModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_CleaningModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>CleaningModuleModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveCleaningModule</defName>
+    <label>remove cleaning module</label>
+    <description>Remove cleaning module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_CleaningModule</ThingDef>
+      <HediffDef>GEGEMM_CleaningModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing cleaning module.</jobString>
+    <removesHediff>GEGEMM_CleaningModule</removesHediff>
+  </RecipeDef>
+  
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallHaulingModule</defName>
+    <label>install hauling module</label>
+    <description>Install a hauling module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_HaulingModule</ThingDef>
+      <HediffDef>GEGEMM_HaulingModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing hauling module.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_HaulingModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_HaulingModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_HaulingModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>HaulingModuleModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveHaulingModule</defName>
+    <label>remove hauling module</label>
+    <description>Remove hauling module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_HaulingModule</ThingDef>
+      <HediffDef>GEGEMM_HaulingModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing hauling module.</jobString>
+    <removesHediff>GEGEMM_HaulingModule</removesHediff>
+  </RecipeDef> 
+
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallConstructionModule</defName>
+    <label>install construction module</label>
+    <description>Install a construction module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_ConstructionModule</ThingDef>
+      <HediffDef>GEGEMM_ConstructionModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing construction module.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_ConstructionModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_ConstructionModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_ConstructionModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>ConstructionModuleModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveConstructionModule</defName>
+    <label>remove construction module</label>
+    <description>Remove construction module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_ConstructionModule</ThingDef>
+      <HediffDef>GEGEMM_ConstructionModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing construction module.</jobString>
+    <removesHediff>GEGEMM_ConstructionModule</removesHediff>
+  </RecipeDef>
+
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallSowingModule</defName>
+    <label>install sowing module</label>
+    <description>Install a sowing module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_SowingModule</ThingDef>
+      <HediffDef>GEGEMM_SowingModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing sowing module.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_SowingModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_SowingModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_SowingModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>SowingModuleModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveSowingModule</defName>
+    <label>remove sowing module</label>
+    <description>Remove sowing module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_SowingModule</ThingDef>
+      <HediffDef>GEGEMM_SowingModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing sowing module.</jobString>
+    <removesHediff>GEGEMM_SowingModule</removesHediff>
+  </RecipeDef>
+  
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallPlantCuttingModule</defName>
+    <label>install plant cutting module</label>
+    <description>Install a plant cutting module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_PlantCuttingModule</ThingDef>
+      <HediffDef>GEGEMM_PlantCuttingModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing plant cutting module.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_PlantCuttingModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_PlantCuttingModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_PlantCuttingModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>PlantCuttingModuleModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemovePlantCuttingModule</defName>
+    <label>remove plant cutting module</label>
+    <description>Remove plant cutting module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_PlantCuttingModule</ThingDef>
+      <HediffDef>GEGEMM_PlantCuttingModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing plant cutting module.</jobString>
+    <removesHediff>GEGEMM_PlantCuttingModule</removesHediff>
+  </RecipeDef>
+
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallMiningModule</defName>
+    <label>install mining module</label>
+    <description>Install a mining module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_MiningModule</ThingDef>
+      <HediffDef>GEGEMM_MiningModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing mining module.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_MiningModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_MiningModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_MiningModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>MiningModuleModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveMiningModule</defName>
+    <label>remove mining module</label>
+    <description>Remove mining module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_MiningModule</ThingDef>
+      <HediffDef>GEGEMM_MiningModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing mining module.</jobString>
+    <removesHediff>GEGEMM_MiningModule</removesHediff>
+  </RecipeDef>
+
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallDoctorModule</defName>
+    <label>install doctor module</label>
+    <description>Install a doctor module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_DoctorModule</ThingDef>
+      <HediffDef>GEGEMM_DoctorModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing doctor module.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_DoctorModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_DoctorModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_DoctorModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>DoctorModuleModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveDoctorModule</defName>
+    <label>remove doctor module</label>
+    <description>Remove doctor module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_DoctorModule</ThingDef>
+      <HediffDef>GEGEMM_DoctorModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing doctor module.</jobString>
+    <removesHediff>GEGEMM_DoctorModule</removesHediff>
+  </RecipeDef>
+
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallCraftingModule</defName>
+    <label>install crafting module</label>
+    <description>Install a crafting module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_CraftingModule</ThingDef>
+      <HediffDef>GEGEMM_CraftingModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing crafting module.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_CraftingModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_CraftingModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_CraftingModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>CraftingModuleModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveCraftingModule</defName>
+    <label>remove crafting module</label>
+    <description>Remove crafting module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_CraftingModule</ThingDef>
+      <HediffDef>GEGEMM_CraftingModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing crafting module.</jobString>
+    <removesHediff>GEGEMM_CraftingModule</removesHediff>
+  </RecipeDef> 
+
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallSmithingModule</defName>
+    <label>install smithing module</label>
+    <description>Install a smithing module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_SmithingModule</ThingDef>
+      <HediffDef>GEGEMM_SmithingModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing smithing module.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_SmithingModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_SmithingModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_SmithingModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>SmithingModuleModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveSmithingModule</defName>
+    <label>remove smithing module</label>
+    <description>Remove smithing module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_SmithingModule</ThingDef>
+      <HediffDef>GEGEMM_SmithingModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing smithing module.</jobString>
+    <removesHediff>GEGEMM_SmithingModule</removesHediff>
+  </RecipeDef>
+
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallTailoringModule</defName>
+    <label>install tailoring module</label>
+    <description>Install a tailoring module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_TailoringModule</ThingDef>
+      <HediffDef>GEGEMM_TailoringModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing tailoring module.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_TailoringModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_TailoringModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_TailoringModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>TailoringModuleModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveTailoringModule</defName>
+    <label>remove tailoring module</label>
+    <description>Remove tailoring module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_TailoringModule</ThingDef>
+      <HediffDef>GEGEMM_TailoringModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing tailoring module.</jobString>
+    <removesHediff>GEGEMM_TailoringModule</removesHediff>
+  </RecipeDef>
+
+
+  <RecipeDef ParentName="InstallModificationLevelWork">
+    <defName>InstallCookingModule</defName>
+    <label>install cooking module</label>
+    <description>Install a cooking module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_CookingModule</ThingDef>
+      <HediffDef>GEGEMM_CookingModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing cooking module.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GEGEMM_CookingModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GEGEMM_CookingModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <addsHediff>GEGEMM_CookingModule</addsHediff>
+	<incompatibleWithHediffTags>
+      <li>CookingModuleModification</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RemoveModificationBase">
+    <defName>RemoveCookingModule</defName>
+    <label>remove cooking module</label>
+    <description>Remove cooking module.</description>
+    <descriptionHyperlinks>
+      <ThingDef>GEGEMM_CookingModule</ThingDef>
+      <HediffDef>GEGEMM_CookingModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing cooking module.</jobString>
+    <removesHediff>GEGEMM_CookingModule</removesHediff>
+  </RecipeDef>
+
+</Defs> 

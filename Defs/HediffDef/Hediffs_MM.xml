@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef Name="ModificationHediffBase" Abstract="True">
+    <hediffClass>Hediff_Implant</hediffClass>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
+    <countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
+    <allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+  </HediffDef>
+  
+  <HediffDef Name="ModificationHediffReplacementBase" ParentName="ModificationHediffBase" Abstract="True">
+    <hediffClass>Hediff_AddedPart</hediffClass>
+  </HediffDef>
+  
+  <!--Overclock-->
+  
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>OverclockProcessor</defName>
+    <label>overclock</label>
+    <labelNoun>an overclock</labelNoun>
+    <description>An installed overclock.</description>
+    <stages>
+      <li>
+		<statOffsets>
+		  <MechEnergyUsageFactor>1</MechEnergyUsageFactor> 
+		</statOffsets>	
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.5</offset>
+          </li>
+        </capMods>		
+      </li>
+    </stages>
+    <tags><li>ProcessorAdjustment</li></tags>
+  </HediffDef>
+
+  <!--SkillLevel-->
+ 
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_PrimitiveSkillModule</defName>
+    <label>skill module(basic)</label>
+    <labelNoun>a skill module(basic)</labelNoun>
+    <description>An installed skill module(basic).</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_PrimitiveSkillModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_PrimitiveSkillModule</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<statOffsets>
+		  <MechAdditionalSkillLevel>2</MechAdditionalSkillLevel> 
+		</statOffsets>	
+	  </li>
+    </stages>
+    <tags><li>SkillModification</li></tags>
+  </HediffDef>
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_MechtechSkillModule</defName>
+    <label>skill module(Standard)</label>
+    <labelNoun>a skill module(Standard)</labelNoun>
+    <description>An installed skill module(Standard).</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_MechtechSkillModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_MechtechSkillModule</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<statOffsets>
+		  <MechAdditionalSkillLevel>4</MechAdditionalSkillLevel> 
+		</statOffsets>	
+	  </li>
+    </stages>
+    <tags><li>SkillModification</li></tags>
+  </HediffDef>
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_HighMechtechSkillModule</defName>
+    <label>skill module(high)</label>
+    <labelNoun>a skill module(high)</labelNoun>
+    <description>An installed skill module(high).</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_HighMechtechSkillModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_HighMechtechSkillModule</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<statOffsets>
+		  <MechAdditionalSkillLevel>6</MechAdditionalSkillLevel> 
+		</statOffsets>	
+	  </li>
+    </stages>
+    <tags><li>SkillModification</li></tags>
+  </HediffDef> 
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_UltraMechtechSkillModule</defName>
+    <label>skill module(ultra)</label>
+    <labelNoun>an skill module(ultra)</labelNoun>
+    <description>An installed skill module(ultra).</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_UltraMechtechSkillModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_UltraMechtechSkillModule</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<statOffsets>
+		  <MechAdditionalSkillLevel>8</MechAdditionalSkillLevel> 
+		</statOffsets>	
+	  </li>
+    </stages>
+    <tags><li>SkillModification</li></tags>
+  </HediffDef>
+
+
+  <!--WorkModule-->
+  
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_FirefighterModule</defName>
+    <label>firefighter module</label>
+    <labelNoun>a firefighter module</labelNoun>
+    <description>An installed firefighter module.</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_FirefighterModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_FirefighterModule</spawnThingOnRemoved>
+	<comps>
+		<li Class="MechanoidModificationsLWS.HediffCompProperties_SkillModification">
+			<workType>Firefighter</workType>
+		</li>
+	</comps>
+    <tags><li>FirefighterModuleModification</li></tags>
+  </HediffDef> 
+
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_CleaningModule</defName>
+    <label>cleaning module</label>
+    <labelNoun>a cleaning module</labelNoun>
+    <description>An installed cleaning module.</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_CleaningModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_CleaningModule</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<statOffsets>
+		  <CleaningSpeed>-0.50</CleaningSpeed>
+		</statOffsets>	
+	  </li>
+    </stages>	
+	<comps>
+		<li Class="MechanoidModificationsLWS.HediffCompProperties_SkillModification">
+			<workType>Cleaning</workType>
+		</li>
+	</comps>
+    <tags><li>CleaningModuleModification</li></tags>
+  </HediffDef>
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_HaulingModule</defName>
+    <label>hauling module</label>
+    <labelNoun>a hauling module</labelNoun>
+    <description>An installed hauling module.</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_HaulingModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_HaulingModule</spawnThingOnRemoved>
+	<comps>
+		<li Class="MechanoidModificationsLWS.HediffCompProperties_SkillModification">
+			<workType>Hauling</workType>
+		</li>
+	</comps>
+    <tags><li>HaulingModuleModification</li></tags>
+  </HediffDef>
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_ConstructionModule</defName>
+    <label>construction module</label>
+    <labelNoun>a construction module</labelNoun>
+    <description>An installed construction module.</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_ConstructionModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_ConstructionModule</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<statOffsets>
+		  <ConstructionSpeed>-0.50</ConstructionSpeed>
+		</statOffsets>	
+	  </li>
+    </stages>	
+	<comps>
+		<li Class="MechanoidModificationsLWS.HediffCompProperties_SkillModification">
+			<workType>Construction</workType>
+		</li>
+	</comps>
+    <tags><li>ConstructionModuleModification</li></tags>
+  </HediffDef>
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_SowingModule</defName>
+    <label>sowing module</label>
+    <labelNoun>a sowing module</labelNoun>
+    <description>An installed sowing module.</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_SowingModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_SowingModule</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<statOffsets>
+		  <PlantWorkSpeed>-0.10</PlantWorkSpeed>  
+		</statOffsets>	
+	  </li>
+    </stages>	
+	<comps>
+		<li Class="MechanoidModificationsLWS.HediffCompProperties_SkillModification">
+			<workType>Growing</workType>
+		</li>
+	</comps>
+    <tags><li>SowingModuleModification</li></tags>
+  </HediffDef>
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_PlantCuttingModule</defName>
+    <label>plant cutting module</label>
+    <labelNoun>a plant cutting module</labelNoun>
+    <description>An installed plant cutting module.</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_PlantCuttingModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_PlantCuttingModule</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<statOffsets>
+		  <PlantWorkSpeed>-0.10</PlantWorkSpeed>  
+		</statOffsets>	
+	  </li>
+    </stages>	
+	<comps>
+		<li Class="MechanoidModificationsLWS.HediffCompProperties_SkillModification">
+			<workType>PlantCutting</workType>
+		</li>
+	</comps>
+    <tags><li>PlantCuttingModuleModification</li></tags>
+  </HediffDef> 
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_MiningModule</defName>
+    <label>mining module</label>
+    <labelNoun>a mining module</labelNoun>
+    <description>An installed mining module.</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_MiningModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_MiningModule</spawnThingOnRemoved>
+	<comps>
+		<li Class="MechanoidModificationsLWS.HediffCompProperties_SkillModification">
+			<workType>Mining</workType>
+		</li>
+	</comps>
+    <tags><li>MiningModuleModification</li></tags>
+  </HediffDef>  
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_DoctorModule</defName>
+    <label>doctor module</label>
+    <labelNoun>a doctor module</labelNoun>
+    <description>An installed doctor module.</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_DoctorModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_DoctorModule</spawnThingOnRemoved>
+	<comps>
+		<li Class="MechanoidModificationsLWS.HediffCompProperties_SkillModification">
+			<workType>Doctor</workType>
+		</li>
+	</comps>
+    <tags><li>DoctorModuleModification</li></tags>
+  </HediffDef> 
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_CraftingModule</defName>
+    <label>crafting module</label>
+    <labelNoun>a crafting module</labelNoun>
+    <description>An installed crafting module.</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_CraftingModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_CraftingModule</spawnThingOnRemoved>
+	<comps>
+		<li Class="MechanoidModificationsLWS.HediffCompProperties_SkillModification">
+			<workType>Crafting</workType>
+		</li>
+	</comps>
+    <tags><li>CraftingModuleModification</li></tags>
+  </HediffDef> 
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_SmithingModule</defName>
+    <label>smithing module</label>
+    <labelNoun>a smithing module</labelNoun>
+    <description>An installed smithing module.</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_SmithingModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_SmithingModule</spawnThingOnRemoved>
+	<comps>
+		<li Class="MechanoidModificationsLWS.HediffCompProperties_SkillModification">
+			<workType>Smithing</workType>
+		</li>
+	</comps>
+    <tags><li>SmithingModuleModification</li></tags>
+  </HediffDef>
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_TailoringModule</defName>
+    <label>tailoring module</label>
+    <labelNoun>a tailoring module</labelNoun>
+    <description>An installed tailoring module.</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_TailoringModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_TailoringModule</spawnThingOnRemoved>
+	<comps>
+		<li Class="MechanoidModificationsLWS.HediffCompProperties_SkillModification">
+			<workType>Tailoring</workType>
+		</li>
+	</comps>
+    <tags><li>TailoringModuleModification</li></tags>
+  </HediffDef> 
+
+  <HediffDef ParentName="ModificationHediffBase">
+    <defName>GEGEMM_CookingModule</defName>
+    <label>cooking module</label>
+    <labelNoun>a cooking module</labelNoun>
+    <description>An installed cooking module.</description>
+    <descriptionHyperlinks><ThingDef>GEGEMM_CookingModule</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>GEGEMM_CookingModule</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<statFactors>
+		  <FoodPoisonChance>0.001</FoodPoisonChance>
+		</statFactors>
+	  </li>
+    </stages>
+	<comps>
+		<li Class="MechanoidModificationsLWS.HediffCompProperties_SkillModification">
+			<workType>Cooking</workType>
+		</li>
+	</comps>
+    <tags><li>CookingModuleModification</li></tags>
+  </HediffDef>
+  
+</Defs>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<name>[sbz] Mech Module</name>
+    <author>seobongzu</author>
+    <packageId>jgh.mechmodule</packageId>
+	<description>Adds mech modules for increasing job types and skill levels. This mod is a rework of Gege's mod.</description>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>Ludeon.RimWorld.Biotech</packageId>
+			<displayName>Biotech</displayName>
+		</li>
+    </modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+	</loadAfter>
+	<incompatibleWith>
+        <li>Gege.mechanoidmodifications</li>
+        <li>Gege.mechanoidmodificationsLevelAndWork</li>
+		<li>Gege.mechanoidmodificationslwstandalone</li>
+    </incompatibleWith>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/sbz</modIconPath>
+</ModMetaData>

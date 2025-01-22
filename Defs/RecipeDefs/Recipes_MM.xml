@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>DestroyModification</defName>
+    <label>destroy mech module</label>
+    <description>Use heat to destroy unwanted modifications. This process yields no resources.</description>
+    <jobString>Destroying modification.</jobString>
+    <workAmount>400</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+	<researchPrerequisite>BasicMechtech</researchPrerequisite>
+	<recipeUsers>
+      <li>ElectricSmelter</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MechanoidModule</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>MechanoidModule</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>MechanoidModule</li>
+      </categories>
+    </defaultIngredientFilter>
+  </RecipeDef>
+
+</Defs>

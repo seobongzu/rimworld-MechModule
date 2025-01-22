@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <InstallOverclockProcessor.label>오버클럭</InstallOverclockProcessor.label>
+  <InstallOverclockProcessor.description>메카노이드의 클럭을 조정하여 이동 속도를 증가시킵니다. 메카노이드는 빠르게 움직일 수 있지만 전력 소모가 두 배로 증가합니다.</InstallOverclockProcessor.description>
+  <InstallOverclockProcessor.jobString>오버클럭 설정 중.</InstallOverclockProcessor.jobString>
+  <DisableOverclockProcessor.label>오버클럭 해제</DisableOverclockProcessor.label>
+  <DisableOverclockProcessor.description>오버클럭을 해제합니다.</DisableOverclockProcessor.description>
+  <DisableOverclockProcessor.jobString>오버 클럭 해제 중.</DisableOverclockProcessor.jobString>
+
+  <InstallPrimitiveSkillModule.label>기술 모듈(기초) 설치</InstallPrimitiveSkillModule.label>
+  <InstallPrimitiveSkillModule.description>기술 모듈(기초)을 설치합니다.</InstallPrimitiveSkillModule.description>
+  <InstallPrimitiveSkillModule.jobString>기술 모듈(기초) 설치 중.</InstallPrimitiveSkillModule.jobString>
+  <RemovePrimitiveSkillModule.label>기술 모듈(기초) 제거</RemovePrimitiveSkillModule.label>
+  <RemovePrimitiveSkillModule.description>기술 모듈(기초)을 제거합니다.</RemovePrimitiveSkillModule.description>
+  <RemovePrimitiveSkillModule.jobString>기술 모듈(기초) 제거 중.</RemovePrimitiveSkillModule.jobString>
+  
+  <InstallMechtechSkillModule.label>기술 모듈(기본) 설치</InstallMechtechSkillModule.label>
+  <InstallMechtechSkillModule.description>기술 모듈(기본)을 설치합니다.</InstallMechtechSkillModule.description>
+  <InstallMechtechSkillModule.jobString>기술 모듈(기본) 설치 중.</InstallMechtechSkillModule.jobString>
+  <RemoveMechtechSkillModule.label>기술 모듈(기본) 제거</RemoveMechtechSkillModule.label>
+  <RemoveMechtechSkillModule.description>기술 모듈(기본)을 제거합니다.</RemoveMechtechSkillModule.description>
+  <RemoveMechtechSkillModule.jobString>기술 모듈(기본) 제거 중.</RemoveMechtechSkillModule.jobString>
+  
+  <InstallHighMechtechSkillModule.label>기술 모듈(첨단) 설치</InstallHighMechtechSkillModule.label>
+  <InstallHighMechtechSkillModule.description>기술 모듈(첨단)을 설치합니다.</InstallHighMechtechSkillModule.description>
+  <InstallHighMechtechSkillModule.jobString>기술 모듈(첨단) 설치 중.</InstallHighMechtechSkillModule.jobString>
+  <RemoveHighMechtechSkillModule.label>기술 모듈(첨단) 제거</RemoveHighMechtechSkillModule.label>
+  <RemoveHighMechtechSkillModule.description>기술 모듈(첨단)을 제거합니다.</RemoveHighMechtechSkillModule.description>
+  <RemoveHighMechtechSkillModule.jobString>기술 모듈(첨단) 제거 중.</RemoveHighMechtechSkillModule.jobString>
+  
+  <InstallUltraMechtechSkillModule.label>기술 모듈(최첨단) 설치</InstallUltraMechtechSkillModule.label>
+  <InstallUltraMechtechSkillModule.description>기술 모듈(최첨단)을 설치합니다.</InstallUltraMechtechSkillModule.description>
+  <InstallUltraMechtechSkillModule.jobString>기술 모듈(최첨단) 설치 중.</InstallUltraMechtechSkillModule.jobString>
+  <RemoveUltraMechtechSkillModule.label>기술 모듈(최첨단) 제거</RemoveUltraMechtechSkillModule.label>
+  <RemoveUltraMechtechSkillModule.description>기술 모듈(최첨단)을 제거합니다.</RemoveUltraMechtechSkillModule.description>
+  <RemoveUltraMechtechSkillModule.jobString>기술 모듈(최첨단) 제거 중.</RemoveUltraMechtechSkillModule.jobString>
+  
+  <InstallFirefighterModule.label>소방 모듈 설치</InstallFirefighterModule.label>
+  <InstallFirefighterModule.description>소방 모듈을 설치합니다.</InstallFirefighterModule.description>
+  <InstallFirefighterModule.jobString>소방 모듈 설치 중.</InstallFirefighterModule.jobString>
+  <RemoveFirefighterModule.label>소방 모듈 제거</RemoveFirefighterModule.label>
+  <RemoveFirefighterModule.description>소방 모듈을 제거합니다.</RemoveFirefighterModule.description>
+  <RemoveFirefighterModule.jobString>소방 모듈 제거 중.</RemoveFirefighterModule.jobString>
+  
+  <InstallCleaningModule.label>청소 모듈 설치</InstallCleaningModule.label>
+  <InstallCleaningModule.description>청소 모듈을 설치합니다.</InstallCleaningModule.description>
+  <InstallCleaningModule.jobString>청소 모듈 설치 중.</InstallCleaningModule.jobString>
+  <RemoveCleaningModule.label>청소 모듈 제거</RemoveCleaningModule.label>
+  <RemoveCleaningModule.description>청소 모듈을 제거합니다.</RemoveCleaningModule.description>
+  <RemoveCleaningModule.jobString>청소 모듈 제거 중.</RemoveCleaningModule.jobString>
+  
+  <InstallHaulingModule.label>운반 모듈 설치</InstallHaulingModule.label>
+  <InstallHaulingModule.description>운반 모듈을 설치합니다.</InstallHaulingModule.description>
+  <InstallHaulingModule.jobString>운반 모듈 설치 중.</InstallHaulingModule.jobString>
+  <RemoveHaulingModule.label>운반 모듈 제거</RemoveHaulingModule.label>
+  <RemoveHaulingModule.description>운반 모듈을 제거합니다.</RemoveHaulingModule.description>
+  <RemoveHaulingModule.jobString>운반 모듈 제거 중.</RemoveHaulingModule.jobString>
+  
+  <InstallConstructionModule.label>건설 모듈 설치</InstallConstructionModule.label>
+  <InstallConstructionModule.description>건설 모듈을 설치합니다.</InstallConstructionModule.description>
+  <InstallConstructionModule.jobString>건설 모듈 설치 중.</InstallConstructionModule.jobString>
+  <RemoveConstructionModule.label>건설 모듈 제거</RemoveConstructionModule.label>
+  <RemoveConstructionModule.description>건설 모듈을 제거합니다.</RemoveConstructionModule.description>
+  <RemoveConstructionModule.jobString>건설 모듈 제거 중.</RemoveConstructionModule.jobString>
+  
+  <InstallSowingModule.label>재배 모듈 설치</InstallSowingModule.label>
+  <InstallSowingModule.description>재배 모듈을 설치합니다.</InstallSowingModule.description>
+  <InstallSowingModule.jobString>재배 모듈 설치 중.</InstallSowingModule.jobString>
+  <RemoveSowingModule.label>재배 모듈 제거</RemoveSowingModule.label>
+  <RemoveSowingModule.description>재배 모듈을 제거합니다.</RemoveSowingModule.description>
+  <RemoveSowingModule.jobString>재배 모듈 제거 중.</RemoveSowingModule.jobString>
+  
+  <InstallPlantCuttingModule.label>제초 모듈 설치</InstallPlantCuttingModule.label>
+  <InstallPlantCuttingModule.description>제초 모듈을 설치합니다.</InstallPlantCuttingModule.description>
+  <InstallPlantCuttingModule.jobString>제초 모듈 설치 중.</InstallPlantCuttingModule.jobString>
+  <RemovePlantCuttingModule.label>제초 모듈 제거</RemovePlantCuttingModule.label>
+  <RemovePlantCuttingModule.description>제초 모듈을 제거합니다.</RemovePlantCuttingModule.description>
+  <RemovePlantCuttingModule.jobString>제초 모듈 제거 중.</RemovePlantCuttingModule.jobString>
+  
+  <InstallMiningModule.label>채굴 모듈 설치</InstallMiningModule.label>
+  <InstallMiningModule.description>채굴 모듈을 설치합니다.</InstallMiningModule.description>
+  <InstallMiningModule.jobString>채굴 모듈 설치 중.</InstallMiningModule.jobString>
+  <RemoveMiningModule.label>채굴 모듈 제거</RemoveMiningModule.label>
+  <RemoveMiningModule.description>채굴 모듈을 제거합니다.</RemoveMiningModule.description>
+  <RemoveMiningModule.jobString>채굴 모듈 제거 중.</RemoveMiningModule.jobString>
+  
+  <InstallDoctorModule.label>의료 모듈 설치</InstallDoctorModule.label>
+  <InstallDoctorModule.description>의료 모듈을 설치합니다.</InstallDoctorModule.description>
+  <InstallDoctorModule.jobString>의료 모듈 설치 중.</InstallDoctorModule.jobString>
+  <RemoveDoctorModule.label>의료 모듈 제거</RemoveDoctorModule.label>
+  <RemoveDoctorModule.description>의료 모듈을 제거합니다.</RemoveDoctorModule.description>
+  <RemoveDoctorModule.jobString>의료 모듈 제거 중.</RemoveDoctorModule.jobString>
+  
+  <InstallCraftingModule.label>제련 모듈 설치</InstallCraftingModule.label>
+  <InstallCraftingModule.description>제련 모듈을 설치합니다.</InstallCraftingModule.description>
+  <InstallCraftingModule.jobString>제련 모듈 설치 중.</InstallCraftingModule.jobString>
+  <RemoveCraftingModule.label>제련 모듈 제거</RemoveCraftingModule.label>
+  <RemoveCraftingModule.description>제련 모듈을 제거합니다.</RemoveCraftingModule.description>
+  <RemoveCraftingModule.jobString>제련 모듈 제거 중.</RemoveCraftingModule.jobString>
+  
+  <InstallSmithingModule.label>제작 모듈 설치</InstallSmithingModule.label>
+  <InstallSmithingModule.description>제작 모듈을 설치합니다.</InstallSmithingModule.description>
+  <InstallSmithingModule.jobString>제작 모듈 설치 중.</InstallSmithingModule.jobString>
+  <RemoveSmithingModule.label>제작 모듈 제거</RemoveSmithingModule.label>
+  <RemoveSmithingModule.description>제작 모듈을 제거합니다.</RemoveSmithingModule.description>
+  <RemoveSmithingModule.jobString>제작 모듈 제거 중.</RemoveSmithingModule.jobString>
+  
+  <InstallTailoringModule.label>재봉 모듈 설치</InstallTailoringModule.label>
+  <InstallTailoringModule.description>재봉 모듈을 설치합니다.</InstallTailoringModule.description>
+  <InstallTailoringModule.jobString>재봉 모듈 설치 중.</InstallTailoringModule.jobString>
+  <RemoveTailoringModule.label>재봉 모듈 제거</RemoveTailoringModule.label>
+  <RemoveTailoringModule.description>재봉 모듈을 제거합니다.</RemoveTailoringModule.description>
+  <RemoveTailoringModule.jobString>재봉 모듈 제거 중.</RemoveTailoringModule.jobString>
+  
+  <InstallCookingModule.label>조리 모듈 설치</InstallCookingModule.label>
+  <InstallCookingModule.description>조리 모듈을 설치합니다.</InstallCookingModule.description>
+  <InstallCookingModule.jobString>조리 모듈 설치 중.</InstallCookingModule.jobString>
+  <RemoveCookingModule.label>조리 모듈 제거</RemoveCookingModule.label>
+  <RemoveCookingModule.description>조리 모듈을 제거합니다.</RemoveCookingModule.description>
+  <RemoveCookingModule.jobString>조리 모듈 제거 중.</RemoveCookingModule.jobString>
+  
+  <DestroyModification.label>모듈 폐기</DestroyModification.label>
+  <DestroyModification.description>쓸모가 없어진 모듈을 폐기합니다. 자원을 얻을 수 없습니다.</DestroyModification.description>
+  <DestroyModification.jobString>모듈 폐기 중.</DestroyModification.jobString>
+</LanguageData>

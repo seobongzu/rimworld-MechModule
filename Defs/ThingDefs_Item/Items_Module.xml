@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="ModificationBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <isTechHediff>true</isTechHediff>
+    <pathCost>14</pathCost>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <Beauty>-4</Beauty>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Mass>1</Mass>
+    </statBases>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+	  <mechanitorOnlyRecipe>true</mechanitorOnlyRecipe>
+      <recipeUsers>
+        <li>JGH_MechModuleTable</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    </recipeMaker>
+	<techHediffsTags>
+	  <li>MechanoidModification</li>
+	</techHediffsTags>
+	<thingCategories>
+	  <li>MechanoidModule</li>
+	</thingCategories>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+
+
+  <!--SkillLevel-->
+ 
+  <ThingDef ParentName="ModificationBase">
+    <defName>GEGEMM_PrimitiveSkillModule</defName>
+    <label>skill module(basic)</label>
+    <description>A skill module(basic).</description>
+	<graphicData>
+		<texPath>Things/Item/SkillModule1</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.1</drawSize>
+	</graphicData>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+	  <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>	
+      <researchPrerequisite>BasicMechtech</researchPrerequisite>
+    </recipeMaker>	
+    <descriptionHyperlinks><RecipeDef>InstallPrimitiveSkillModule</RecipeDef></descriptionHyperlinks>
+    <costList>
+	  <SignalChip>1</SignalChip>	
+	  <Silver>2</Silver>
+      <Steel>25</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>	  
+    </costList>
+  </ThingDef>
+
+
+  <ThingDef ParentName="ModificationBase">
+    <defName>GEGEMM_MechtechSkillModule</defName>
+    <label>skill module(Standard)</label>
+    <description>A skill module(standard).</description>
+	<graphicData>
+		<texPath>Things/Item/SkillModule1</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.1</drawSize>
+	</graphicData>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+	  <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>	
+      <researchPrerequisite>StandardMechtech</researchPrerequisite>
+    </recipeMaker>		
+    <descriptionHyperlinks><RecipeDef>InstallMechtechSkillModule</RecipeDef></descriptionHyperlinks>
+    <costList>
+	  <PowerfocusChip>1</PowerfocusChip>
+	  <Silver>5</Silver>
+      <Steel>25</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>	  
+    </costList>
+  </ThingDef>
+
+  
+  <ThingDef ParentName="ModificationBase">
+    <defName>GEGEMM_HighMechtechSkillModule</defName>
+    <label>skill module(high)</label>
+    <description>A skill module(high).</description>
+	<graphicData>
+		<texPath>Things/Item/SkillModule2</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.1</drawSize>
+	</graphicData>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+    </statBases>  
+    <recipeMaker>
+	  <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>HighMechtech</researchPrerequisite>
+    </recipeMaker>	
+    <descriptionHyperlinks><RecipeDef>InstallHighMechtechSkillModule</RecipeDef></descriptionHyperlinks>
+    <costList>
+	  <NanostructuringChip>1</NanostructuringChip>
+	  <Gold>2</Gold>
+      <Plasteel>25</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>	  
+    </costList>
+  </ThingDef>
+
+  
+  <ThingDef ParentName="ModificationBase">
+    <defName>GEGEMM_UltraMechtechSkillModule</defName>
+    <label>skill module(ultra)</label>
+    <description>An skill module(ultra).</description>
+	<graphicData>
+		<texPath>Things/Item/SkillModule3</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.1</drawSize>
+	</graphicData>
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+    </statBases>  
+    <recipeMaker>
+	  <skillRequirements>
+        <Crafting>11</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>UltraMechtech</researchPrerequisite>
+    </recipeMaker>	
+    <descriptionHyperlinks><RecipeDef>InstallUltraMechtechSkillModule</RecipeDef></descriptionHyperlinks>
+    <costList>
+	  <AIPersonaCore>1</AIPersonaCore>	  
+	  <NanostructuringChip>1</NanostructuringChip>
+	  <Gold>5</Gold>
+      <Plasteel>25</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>  
+    </costList>
+  </ThingDef>
+
+
+  <!--WorkMods-->
+
+  <ThingDef Name="ModificationBasicBase" ParentName="ModificationBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>BasicMechtech</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="ModificationStandardBase" ParentName="ModificationBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>StandardMechtech</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef Name="ModificationHighBase" ParentName="ModificationBase" Abstract="True">
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>HighMechtech</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="ModificationUltraBase" ParentName="ModificationBase" Abstract="True">
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>UltraMechtech</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>  
+    
+
+  <ThingDef Name="ModuleModificationBasicBase" ParentName="ModificationBasicBase" Abstract="True">
+	<graphicData>
+		<texPath>Things/Item/MechaModule</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.1</drawSize>
+	</graphicData>  
+    <costList>
+      <Steel>50</Steel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+      <SubcoreBasic>1</SubcoreBasic>
+    </costList>
+  </ThingDef>
+
+  <ThingDef Name="ModuleModificationStandardBase" ParentName="ModificationStandardBase" Abstract="True">
+	<graphicData>
+		<texPath>Things/Item/MechaModule</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.1</drawSize>
+	</graphicData>  
+    <costList>
+	  <Steel>100</Steel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+      <SubcoreRegular>1</SubcoreRegular>
+    </costList>
+  </ThingDef>
+  
+  <ThingDef Name="ModuleModificationHighBase" ParentName="ModificationHighBase" Abstract="True">
+	<graphicData>
+		<texPath>Things/Item/MechaModule</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.1</drawSize>
+	</graphicData>  
+    <costList>
+      <Plasteel>50</Plasteel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+      <SubcoreHigh>1</SubcoreHigh>
+    </costList>
+  </ThingDef>
+
+  <ThingDef Name="ModuleModificationUltraBase" ParentName="ModificationUltraBase" Abstract="True">
+	<graphicData>
+		<texPath>Things/Item/MechaModule</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.1</drawSize>
+	</graphicData>  
+    <costList>
+      <Plasteel>100</Plasteel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+      <SubcoreHigh>1</SubcoreHigh>
+    </costList>
+  </ThingDef>
+
+
+
+  
+  <ThingDef ParentName="ModuleModificationBasicBase">
+    <defName>GEGEMM_HaulingModule</defName>
+    <label>hauling module</label>
+    <description>A hauling module.</description>
+    <descriptionHyperlinks><RecipeDef>InstallHaulingModule</RecipeDef></descriptionHyperlinks>
+  </ThingDef>  
+
+  <ThingDef ParentName="ModuleModificationBasicBase">
+    <defName>GEGEMM_CleaningModule</defName>
+    <label>cleaning module</label>
+    <description>A cleaning module.</description>
+    <descriptionHyperlinks><RecipeDef>InstallCleaningModule</RecipeDef></descriptionHyperlinks>
+  </ThingDef> 
+  
+  <ThingDef ParentName="ModuleModificationBasicBase">
+    <defName>GEGEMM_ConstructionModule</defName>
+    <label>construction module</label>
+    <description>A construction module.</description>
+    <descriptionHyperlinks><RecipeDef>InstallConstructionModule</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+  <ThingDef ParentName="ModuleModificationBasicBase">
+    <defName>GEGEMM_SowingModule</defName>
+    <label>sowing module</label>
+    <description>A sowing module.</description>
+    <descriptionHyperlinks><RecipeDef>InstallSowingModule</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+  <ThingDef ParentName="ModuleModificationBasicBase">
+    <defName>GEGEMM_PlantCuttingModule</defName>
+    <label>plant cutting module</label>
+    <description>A plant cutting module.</description>
+    <descriptionHyperlinks><RecipeDef>InstallPlantCuttingModule</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+  <ThingDef ParentName="ModuleModificationStandardBase">
+    <defName>GEGEMM_MiningModule</defName>
+    <label>mining module</label>
+    <description>A mining module.</description>
+    <descriptionHyperlinks><RecipeDef>InstallMiningModule</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+  <ThingDef ParentName="ModuleModificationHighBase">
+    <defName>GEGEMM_FirefighterModule</defName>
+    <label>firefighter module</label>
+    <description>A firefighter module.</description>
+    <descriptionHyperlinks><RecipeDef>InstallFirefighterModule</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+  
+  <ThingDef ParentName="ModuleModificationHighBase">
+    <defName>GEGEMM_DoctorModule</defName>
+    <label>doctor module</label>
+    <description>A doctor module.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDoctorModule</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+  <ThingDef ParentName="ModuleModificationHighBase">
+    <defName>GEGEMM_CookingModule</defName>
+    <label>cooking module</label>
+    <description>A cooking module.</description>
+    <descriptionHyperlinks><RecipeDef>InstallCookingModule</RecipeDef></descriptionHyperlinks>
+  </ThingDef> 
+  
+  <ThingDef ParentName="ModuleModificationHighBase">
+    <defName>GEGEMM_SmithingModule</defName>
+    <label>smithing module</label>
+    <description>A smithing module.</description>
+    <descriptionHyperlinks><RecipeDef>InstallSmithingModule</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+  
+  <ThingDef ParentName="ModuleModificationHighBase">
+    <defName>GEGEMM_TailoringModule</defName>
+    <label>tailoring module</label>
+    <description>A tailoring module.</description>
+    <descriptionHyperlinks><RecipeDef>InstallTailoringModule</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+  
+  <ThingDef ParentName="ModuleModificationHighBase">
+    <defName>GEGEMM_CraftingModule</defName>
+    <label>crafting module</label>
+    <description>A crafting module.</description>
+    <descriptionHyperlinks><RecipeDef>InstallCraftingModule</RecipeDef></descriptionHyperlinks>
+  </ThingDef> 
+  
+</Defs>
